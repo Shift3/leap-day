@@ -31,7 +31,7 @@ h1, h2, h3 {
 
 h1 {
   font-size:28px;
-  color:green;
+  color: #333333;
 }
 
 h2 {
@@ -71,8 +71,8 @@ strong {
 }
 
 .wrapper {
-  width:650px;
-  margin:0 auto;
+  width: 80vw;
+  margin-left: auto;
   position:relative;
 }
 
@@ -157,7 +157,7 @@ header {
   right:0;
   width: 100%;
   text-align: center;
-  background: url(../images/background.png) #4276b6;
+  background: #323232;
   box-shadow: 1px 0px 2px rgba(0,0,0,.75);
   z-index:99;
   -webkit-font-smoothing:antialiased;
@@ -166,7 +166,6 @@ header {
   h1 {
     font: 40px/48px 'Copse', "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #f3f3f3;
-    text-shadow: 0px 2px 0px #235796;
     margin: 0px;
     white-space: nowrap;
     overflow: hidden;
@@ -185,14 +184,15 @@ header {
 
 #banner {
   z-index: 100;
+  width: 100%;
   left:0;
   right:50%;
   height: 50px;
   margin-right:-382px;
   position: fixed;
   top: 115px;
-  background: #ffcc00;
-  border: 1px solid #f0b500;
+  background: #F8CE46;
+  border: 1px solid #F8CE46;
   box-shadow: 0px 1px 3px rgba(0,0,0,.25);
   border-radius: 0px 2px 2px 0px;
   padding-right: 10px;
@@ -264,7 +264,7 @@ header {
     position:absolute;
     height: 36px;
     width: 36px;
-    right:7px;
+    right:24px;
     top:7px;
     display: block;
     background: url(../images/octocat-logo.svg);
@@ -272,15 +272,11 @@ header {
 }
 
 section {
-  width:590px;
   padding: 30px 30px 50px 30px;
   margin: 20px 0;
   margin-top: 190px;
   position:relative;
-  background: #fbfbfb;
   border-radius: 3px;
-  border: 1px solid #cbcbcb;
-  box-shadow: 0px 1px 2px rgba(0,0,0,.09), inset 0px 0px 2px 2px rgba(255,255,255,.5), inset 0 0 5px 5px rgba(255,255,255,.4);
 }
 
 small {
@@ -288,11 +284,12 @@ small {
 }
 
 nav {
-  width: 230px;
+  border-right: 3px solid #333;
+  padding-right: 1vw;
+  width: 18vw;
   position: fixed;
   top: 220px;
-  left:50%;
-  margin-left:-580px;
+  left: 0;
   text-align: right;
 
   ul {
@@ -332,7 +329,7 @@ nav {
     a {
       color: #666;
 
-      &:hover { color: #999; }
+      &:hover { color: #2057B9; }
     }
 
     // .active {
