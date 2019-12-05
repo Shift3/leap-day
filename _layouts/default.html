@@ -1,3 +1,6 @@
+---
+tipue_search_active: true
+---
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -8,6 +11,12 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    {% if page.tipue_search_active or layout.tipue_search_active %}
+    <script src="{{ '/assets/tipuesearch/tipuesearch_content.js' | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ '/assets/tipuesearch/css/tipuesearch.css' | relative_url }}">
+    <script src="{{ '/assets/tipuesearch/tipuesearch_set.js' | relative_url }}"></script>
+    <script src="{{ '/assets/tipuesearch/tipuesearch.min.js' | relative_url }}"></script>
+    {% endif %}
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
     <![endif]-->
@@ -23,6 +32,19 @@
 
       <div id="banner">
         <span id="logo"></span>
+<form action="{{ page.url | relative_url }}">
+  <div class="tipue_search_left"><img src="{{ '/assets/tipuesearch/search.png' | relative_url }}" class="tipue_search_icon"></div>
+  <div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
+  <div style="clear: both;"></div>
+</form>
+
+<div id="tipue_search_content"></div>
+
+<script>
+$(document).ready(function() {
+  $('#tipue_search_input').tipuesearch();
+});
+</script>
 
         <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
         {% if site.show_downloads %}
